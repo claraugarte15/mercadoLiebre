@@ -17,6 +17,6 @@ app.get("/register", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/register.html"))
 });
 
-app.listen(4000, () => {
-console.log("Servidor corriendo en el puerto 4000")
-});
+app.listen(process.env.PORT || 3000, function () {
+    console.log ("Servidor corriendo en el puerto 3000");
+})
